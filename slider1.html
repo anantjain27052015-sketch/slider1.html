@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <section>
+            
+    <img class="myslides" src="background1.jpg" style="height: 500px;">
+     <img class="myslides" src="background.jpg" style="height: 500px;">
+     <img class="myslides" src="background2.jpg" style="height: 500px;">
+     <img class="myslides" src="3.jpg" style="height: 500px;">
+
+        </section>
+        <script>
+            var myindex=0;
+            carousel();
+           function carousel(){
+                var i;
+                var x=document.getElementsByClassName("myslides");
+                for (i=0; i<x.length;i++){
+                    x[i].style.dispay="none";
+                }
+                myindex++
+                  if(myindex > x.length) {myindex=1}
+                x[myindex-1].style.display="block";
+                setTimeout(carousel,3000);
+            }
+                
+            
+        </script>
+    </body>
+</html>
